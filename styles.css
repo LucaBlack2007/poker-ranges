@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 10px;
+    border: none;
+    background: #444;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #666;
+}
+
+.input-box, .select-box {
+    padding: 10px;
+    width: 80%;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1em;
+}
+
+#quick-select-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+#quick-select-buttons button {
+    background: #666;
+    padding: 8px 12px;
+    border-radius: 6px;
+    color: white;
+}
+
+#coverage-percentage {
+    font-size: 1.2em;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+#range-container {
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.hand-box {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: #eee;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.hand-box.selected {
+    background: #444;
+    color: white;
+}
+
+#saved-ranges {
+    margin-top: 20px;
+}
+
+.saved-range {
+    padding: 8px;
+    background: #ddd;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+}

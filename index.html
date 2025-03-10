@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poker Range Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="start-screen">
+            <h1>Poker Range Builder</h1>
+            <button id="create-range">Create New Range</button>
+            <div id="saved-ranges"></div>
+        </div>
+        
+        <div id="range-editor" class="hidden">
+            <input type="text" id="range-name" placeholder="Enter range name" class="input-box">
+            <select id="position-select" class="select-box">
+                <option value="early">Early Position</option>
+                <option value="mid">Mid Position</option>
+                <option value="late">Late Position</option>
+            </select>
+            
+            <div id="quick-select-buttons">
+                <button data-category="pockets">Pockets</button>
+                <button data-category="suited-connectors">Suited Connectors</button>
+                <button data-category="suited-one-gappers">Suited One-Gappers</button>
+                <button data-category="A2s+">A2s+</button>
+                <button data-category="A2+">A2+</button>
+            </div>
+            
+            <div id="coverage-percentage">Coverage: 0%</div>
+            
+            <div id="range-container"></div>
+            <button id="save-range">Save Range</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
