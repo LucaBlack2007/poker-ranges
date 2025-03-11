@@ -56,17 +56,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function selectCategory(category) {
         hands.forEach((hand) => {
-            if (matchesCategory(hand, category)) {
+            if (matchesCategory(hand, category) && category != "clear") {
                 currentRange[hand] = true;
+            } else if (category == "clear") {
+                currentRange[hand] = false
             }
         });
         createGrid();
     }
 
     function matchesCategory(hand, category) {
-        const highCard = ranks.indexOf(hand[0]);
-        const lowCard = ranks.indexOf(hand[1]);
+        const highCard = ranks.indexOf(hand[1]);
+        const lowCard = ranks.indexOf(hand[0]);
 
+        console.log(`${highCard} ${lowCard} suited: ${isSuited(hand)}`)
+
+        if (category === "clear") return false;
         if (category === "pockets") return hand[0] === hand[1];
         if (category === "suited-connectors") return isSuited(hand) && highCard - lowCard === 1;
         if (category === "suited-one-gappers") return isSuited(hand) && highCard - lowCard === 2;
